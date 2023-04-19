@@ -14,50 +14,19 @@ const app = express();
 const server = 'localhost:27017'
 const database = 'traildb'
 
-/*async () => {
-    try {
-        await mongoose.connect(`mongodb:// ${server}/${database}`);
-        console.log("new db connected");
-    }catch (err) {
-        console.log("failed to new db");
-    }
-};
-
-//connectdb
-//module.exports = connectDB
-//connectDB()*/
 async function run () {
     await mongoose.connect("mongodb+srv://Shridb22:Shrilekha22@demo1.redzstq.mongodb.net/test", {
        // connectTimeoutMS: 50000,
         useNewUrlParser: true,
         useUnifiedTopology: true
       })
-    .then(console.log("connected to server"))
+    .then(console.log("connected to database"))
     .catch((err) => console.log(err));;
     await mongoose.model('User').findOne();
 }
 
 run();
 
-
-
-/*
-mongoose.connect("mongodb://localhost:27017/local/newcollection", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
-.then(console.log("connected to server"))
-.catch((err) => console.log(err));
-*/
-
-
-
-
-
-
-//const uri = process.env.ATLAS_URI;
-//mongoose.connect("mongodb://localhost:27017", { useNewUrlParser: true, useCreateIndex: true });
-//const studentSignUp = mongoose.model("studentSignUp", User.User);
 
 app.use(cors());
 app.use(express.static("public"));
@@ -123,14 +92,28 @@ app.post("/studentSignUp.html",(req, res) => {
 	//return res.status(200).json(user);
     return res.status(200).json(user);
 });
-/*app.post("/studentSignUp.html", async (req, res) => {
-	const user = await User.create({
-	username: req.body.username,
-	password: req.body.password
-	});
-	
-	return res.status(200).json(user);
-});*/
+
+//handling user login
+app.post('/studentLogin.html', async function(req,res){
+        console.log("hey");
+        const user = await User.findOne({ username: req.body.logId });
+        console.log(user);
+        if (user) {
+            const result = req.body.logPass === user.password;
+            if (result) {
+                //res.send(`Username: ${user.username} Password: ${user.password}`);
+                //return res.status(200).send(student_signup);
+                //res.status(200);
+                res.set('Content-Type', 'text/plain').send("logged in successfully");
+            }else {
+                return res.status(400).json({ error: "password doest match"})
+            }
+
+        }
+        else{
+            return res.status(400).json({ error: "User doesnt exist" });
+        }
+})
 
 
 app.listen(port, (error) => {
@@ -142,5 +125,5 @@ app.listen(port, (error) => {
     }
     
 
-})
+});
 
