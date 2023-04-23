@@ -2,11 +2,7 @@
 <html>
   <head>
     <title>Project Management System</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./public/styles/loginStyle.css"
-    />
+    <link rel="stylesheet" href="./public/styles/loginStyle.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +13,7 @@
   <body>
     <div class="loginForm">
       <form>
-        <h1>Faculty Login</h1>
+        <h1>Faculty SignUp</h1>
         <input
           class="loginInput"
           type="email"
@@ -30,16 +26,22 @@
           type="password"
           id="loginPass"
           name="logPass"
-          placeholder="Password"
+          placeholder="Enter a new password"
         /><br />
-        <input class="signIn-button" type="submit" value="Sign In" />
+        <input
+          class="loginInput"
+          type="password"
+          id="loginPass"
+          name="logPass"
+          placeholder="Confirm password"
+        /><br />
+        <input class="signUp-button" type="submit" value="Sign Up" />
       </form>
-      <a href="./facultySignUp.html">
-        <button type="button" class="signUp-button">Sign Up</button>
-      </a>
-      <p><a href="./facultySignature.html"> file upload </a></p>
-      <div class="goBackDiv">
-        <a href="./index.html">Go Back</a>
+      <div>
+        <p>
+          Already have an account?
+          <span><a href="./facultyLogin.html">Login</a></span>
+        </p>
       </div>
     </div>
   </body>

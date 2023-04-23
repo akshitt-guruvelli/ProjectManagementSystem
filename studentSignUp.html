@@ -1,31 +1,47 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Project Management System signup</title>
-    </head>
-    <body>
-        <div class="signupForm">
-          <form action="/studentSignUp.html" method="POST">
-            <h1> Sign up form </h1>
-            <input
-            class="signupInput"
-            type="email"
-            id="signupId"
-            name="username"
-            placeholder="Username"
-          /><br />
-            <input
-            class="signupInput"
-            type="password"
-            id="signupPass"
-            name="password"
-            placeholder="Password"
-          /><br />
-        <input class="signup-button" type="submit" value="Sign up" />
+  <head>
+    <title>Project Management System</title>
+    <link rel="stylesheet" href="./public/styles/loginStyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montaga&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="loginForm">
+      <form>
+        <h1>Student SignUp</h1>
+        <input
+          class="loginInput"
+          type="email"
+          id="loginId"
+          name="logId"
+          placeholder="Username"
+        /><br />
+        <input
+          class="loginInput"
+          type="password"
+          id="loginPass"
+          name="logPass"
+          placeholder="Enter a new password"
+        /><br />
+        <input
+          class="loginInput"
+          type="password"
+          id="loginPass"
+          name="logPass"
+          placeholder="Confirm password"
+        /><br />
+        <input class="signUp-button" type="submit" value="Sign Up" />
       </form>
-      <div class="goBackDiv">
-        <a href="./index.html">Go Back</a>
+      <div>
+        <p>
+          Already have an account?
+          <span><a href="./studentLogin.html">Login</a></span>
+        </p>
       </div>
     </div>
   </body>

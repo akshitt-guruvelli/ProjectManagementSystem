@@ -40,6 +40,18 @@ body {
   cursor: pointer;
   background-color: #3f37c9;
 }
+.signUp-button {
+  width: 90%;
+  color: white;
+  background-color: #139c78;
+  border: none;
+  height: 2.5rem;
+  border-radius: 20px;
+}
+.signUp-button:hover {
+  cursor: pointer;
+  background-color: #099773;
+}
 .goBackDiv {
   text-align: right;
 }
