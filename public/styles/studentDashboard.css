@@ -1,0 +1,46 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Montaga", serif;
+}
+body {
+  display: flex;
+  background-color: #a8dadc;
+}
+.dashboard {
+  width: 100%;
+}
+.profile {
+  height: 100%;
+  background-color: aliceblue;
+}
+.profile-pic {
+  width: 100%;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.profile-txt {
+  text-align: center;
+  font-family: "Montaga", serif;
+}
+.dashboard-content {
+  padding: 3rem;
+  text-align: center;
+}
+.profile-txt a .btn {
+  width: 80%;
+  margin: 0.5rem;
+}
+.dashboard-content a .btn {
+  width: 25%;
+  margin: 1rem;
+}
+a {
+  text-decoration: none;
+}
+/* .dashboard-content-buttons {
+  display: flex;
+} */

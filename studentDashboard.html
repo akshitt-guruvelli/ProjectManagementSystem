@@ -2,7 +2,11 @@
 <html>
   <head>
     <title>Project Management System</title>
-    <link rel="stylesheet" href="./public/styles/studentUpload.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./public/styles/studentDashboard.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +26,7 @@
     ></script>
   </head>
   <body>
-    <div class="row upload-page">
+    <div class="row dashboard">
       <div class="col-4 profile">
         <div class="profile-pic">
           <img
@@ -49,14 +53,20 @@
           </a>
         </div>
       </div>
-      <div class="col-8">
-        <header>
-          <h1>Upload your presentation reports and presentations</h1>
-        </header>
-        <form>
-          <input type="file" id="myFile" name="filename" />
-          <input type="submit" />
-        </form>
+      <div class="col-8 dashboard-content">
+        <div class="dashboard-content-buttons">
+          <a href="./studentUpload.html">
+            <button type="button" class="btn btn-primary btn-lg">
+              File Upload
+            </button>
+          </a>
+          <a href="#">
+            <button type="button" class="btn btn-success btn-lg">abcd</button>
+          </a>
+          <a href="#">
+            <button type="button" class="btn btn-info btn-lg">abcd</button>
+          </a>
+        </div>
       </div>
     </div>
   </body>
